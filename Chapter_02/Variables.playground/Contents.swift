@@ -9,5 +9,8 @@ population = 5422
 
 let townName: String = "AnyTown USA"
 
-let townDescription = "\(townName) has a population of \(population) and \(numberOfStopLights) stoplights."
+let unemploymentLevel: Double = 2.5
+
+let townDescription = "\(townName) has a population of \(population), \(numberOfStopLights) stoplights, and unemployment level of \(unemploymentLevel)"
 print(townDescription)
+
