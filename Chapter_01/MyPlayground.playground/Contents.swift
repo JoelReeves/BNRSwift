@@ -2,6 +2,5 @@
 
 import Cocoa
 
-var str = "Hello, playground"
-str += "!"
-print(str)
+var lastName = "Reeves"
+print(lastName)
