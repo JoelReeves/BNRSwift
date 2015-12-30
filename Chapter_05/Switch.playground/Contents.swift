@@ -2,7 +2,7 @@
 
 import Cocoa
 
-var statusCode: Int = 205
+var statusCode: Int = 418
 var errorString: String = "The request failed with the error: "
 
 switch statusCode {
@@ -28,4 +28,29 @@ default:
     errorString = "Unexpected error occurred."
 }
 
-print(errorString)
+let error = (code: statusCode, error: errorString)
+error.code
+error.error
+print(error)
+
+let firstErrorCode = 404
+let secondErrorCode = 200
+let errorCodes = (firstErrorCode, secondErrorCode)
+
+switch errorCodes {
+case (404, 404):
+    print("No items found")
+    
+case (404, _):
+    print("First item not found")
+    
+case (_, 404):
+    print("Second item not found")
+    
+default:
+    print("All items found")
+}
+
+print(errorCodes)
+
+
