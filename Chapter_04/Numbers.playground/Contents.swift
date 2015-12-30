@@ -29,3 +29,16 @@ print((10 + 2) * 5)
 print(11 / 3) // 3.66666666667 prints 3. fraction part is truncated
 print(11 % 3)
 print(-11 % 3)
+
+var x = 10
+x++
+print("x has been incremented to \(x)")
+x--
+print("x has been decremented to \(x)")
+
+x += 10
+print("x has had 10 added to it and is now \(x)")
+
+let y: Int8 = 120
+let z = y &+ 10 // using overflow operator
+print("120 &+ 10 is \(z)")
