@@ -13,3 +13,9 @@ print("The minimum UInt value is \(UInt.min)")
 
 print("The maximum value for a 32-bit unsigned integer is \(UInt32.max)")
 print("The minimum value for a 32-bit unsigned integer is \(UInt32.min)")
+
+let numberOfPages: Int = 10 // decalring explicitly
+let numberOfChapters = 3 // decalring implicitly
+
+let numberOfPeople: UInt = 40
+let volumeAdjustment: Int32 = -1000
