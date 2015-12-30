@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+// Bronze Challenge
 
 import Cocoa
 
@@ -10,8 +10,10 @@ if population < 10000 {
     message = "\(population) is a small town!"
 } else if population >= 10000 && population < 50000 {
     message = "\(population) is a medium town"
-} else {
+} else if population >= 50000 && population < 100000 {
     message = "\(population) is pretty big!"
+} else {
+    message = "\(population) is gargantuan!"
 }
 
 print(message)
