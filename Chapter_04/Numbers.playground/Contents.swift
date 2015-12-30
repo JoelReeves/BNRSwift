@@ -19,3 +19,11 @@ let numberOfChapters = 3 // decalring implicitly
 
 let numberOfPeople: UInt = 40
 let volumeAdjustment: Int32 = -1000
+
+print(10 + 20)
+print(30 * 10)
+
+print(10 + 2 * 5)
+print((10 + 2) * 5)
+
+
