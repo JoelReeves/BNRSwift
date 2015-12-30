@@ -26,4 +26,6 @@ print(30 * 10)
 print(10 + 2 * 5)
 print((10 + 2) * 5)
 
-
+print(11 / 3) // 3.66666666667 prints 3. fraction part is truncated
+print(11 % 3)
+print(-11 % 3)
