@@ -54,3 +54,14 @@ default:
 print(errorCodes)
 
 
+let age = 25
+
+if case 18...35 = age {
+    print("Age is in the correct range!")
+}
+
+if case 18...35 = age where age >= 21 {
+    print("Correct drinking age!!!!")
+}
+
+
