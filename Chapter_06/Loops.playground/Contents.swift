@@ -18,3 +18,10 @@ for var i = 1; i < 6; ++i {
     print(myFirstInt)
 }
 
+var i = 1
+while i < 6 {
+    ++myFirstInt
+    print(myFirstInt)
+    ++i
+}
+
