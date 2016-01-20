@@ -17,3 +17,5 @@ for scalar in playGround.unicodeScalars {
 
 let aAcutePrecomposed = "\u{00E1}"
 let b = (aAcute == aAcutePrecomposed)
+
+print("aAcute: \(aAcute.characters.count); aAcutePrecomposed: \(aAcutePrecomposed.characters.count)")
