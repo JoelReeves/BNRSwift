@@ -19,3 +19,11 @@ let aAcutePrecomposed = "\u{00E1}"
 let b = (aAcute == aAcutePrecomposed)
 
 print("aAcute: \(aAcute.characters.count); aAcutePrecomposed: \(aAcutePrecomposed.characters.count)")
+
+let fromStart = playGround.startIndex
+let toPosition = 4
+let end = fromStart.advancedBy(toPosition)
+let fifthCharacter = playGround[end]
+
+let range = fromStart...end
+let firstFive = playGround[range]
