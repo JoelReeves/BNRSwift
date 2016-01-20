@@ -9,3 +9,7 @@ for _ in 1...5 {
     print(myFirstInt)
 }
 
+for case let i in 1...100 where i % 3 == 0 {
+    print(i)
+}
+
