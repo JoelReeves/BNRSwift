@@ -8,3 +8,9 @@ mutablePlayGround += "!"
 for c: Character in mutablePlayGround.characters {
     print("\(c)")
 }
+
+let oneCoolDude = "\u{1F60E}"
+let aAcute = "\u{0061}\u{0301}"
+for scalar in playGround.unicodeScalars {
+    print("\(scalar.value)")
+}
