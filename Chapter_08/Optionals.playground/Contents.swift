@@ -10,3 +10,6 @@ if let theError = errorCodeString, errorCodeInteger = Int(theError) where errorC
 
 var upCaseErrorDescription = errorDescription?.uppercaseString
 errorDescription
+
+upCaseErrorDescription?.appendContentsOf(" PLEASE TRY AGAIN")
+upCaseErrorDescription
