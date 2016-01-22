@@ -13,3 +13,5 @@ errorDescription
 
 upCaseErrorDescription?.appendContentsOf(" PLEASE TRY AGAIN")
 upCaseErrorDescription
+
+let description = errorDescription ?? "No Error"
