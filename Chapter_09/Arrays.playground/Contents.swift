@@ -1,8 +1,18 @@
 import Cocoa
 
-//Bronze Challenge
+//Silver Challenge
 
 var toDoList = ["Take out garbage", "Pay bills", "cross off finished items"]
+var reverseArray = [String]()
 
-print("Is toDoList empty? \(toDoList.isEmpty)")
+for var i = toDoList.count - 1; i >= 0; i-- {
+    reverseArray.append(toDoList[i])
+}
+
+reverseArray
+
+
+toDoList = toDoList.reverse()
+
+
 
