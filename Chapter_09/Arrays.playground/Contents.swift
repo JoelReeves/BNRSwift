@@ -2,10 +2,14 @@ import Cocoa
 
 var bucketList = ["Climb Mt. Everest"]
 
-bucketList.append("Fly hot air balloon to Fiji")
-bucketList.append("Lord of the Rings is the best movie")
-bucketList.append("Go outside")
-bucketList.append("Go see the new Star Wars movie")
+var newItems = ["Fly hot air balloon to Fiji",
+                "Lord of the Rings is the best movie",
+                "Go outside",
+                "Go see the new Star Wars movie"]
+
+for item in newItems {
+    bucketList.append(item)
+}
 
 bucketList.removeAtIndex(4)
 
