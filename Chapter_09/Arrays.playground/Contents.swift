@@ -12,6 +12,7 @@ bucketList += newItems
 bucketList.removeAtIndex(4)
 
 print("There are \(bucketList.count) items in the array")
+print("bucketList capacity \(bucketList.capacity)")
 print(bucketList[0...2])
 
 bucketList[2] += " of all time!!!"
@@ -35,4 +36,15 @@ var arrayEqual = ["Climb Mt. Kilimanjaro",
 
 let notEqual = (bucketList == arrayNotEqual)
 let equal = (bucketList == arrayEqual)
+
+let lunches = ["Pizza",
+                "Chinese food",
+                "Sushi"]
+
+var arrayInts = [Int](count: 10, repeatedValue: 0)
+
+for var i = 1; i < 11; i++ {
+    arrayInts.append(i)
+}
+
 
