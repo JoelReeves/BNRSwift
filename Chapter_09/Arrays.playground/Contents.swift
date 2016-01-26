@@ -16,5 +16,6 @@ print(bucketList[0...2])
 
 bucketList[2] += " of all time!!!"
 bucketList[0] = "Climb Mt. Kilimanjaro"
+bucketList.insert("Go to Hawaii", atIndex: 2)
 
 bucketList
