@@ -19,3 +19,20 @@ bucketList[0] = "Climb Mt. Kilimanjaro"
 bucketList.insert("Go to Hawaii", atIndex: 2)
 
 bucketList
+
+// not equal because order of items and text is different
+var arrayNotEqual = ["Go outside!",
+                        "Fly hot air balloon to Fiji",
+                        "Go to Hawaii",
+                        "Lord of the Rings is the best movie of all time!",
+                        "Climb Mt. Kilimanjaro"]
+
+var arrayEqual = ["Climb Mt. Kilimanjaro",
+                    "Fly hot air balloon to Fiji",
+                    "Go to Hawaii",
+                    "Lord of the Rings is the best movie of all time!!!",
+                    "Go outside"]
+
+let notEqual = (bucketList == arrayNotEqual)
+let equal = (bucketList == arrayEqual)
+
