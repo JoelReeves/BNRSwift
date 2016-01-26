@@ -7,9 +7,7 @@ var newItems = ["Fly hot air balloon to Fiji",
                 "Go outside",
                 "Go see the new Star Wars movie"]
 
-for item in newItems {
-    bucketList.append(item)
-}
+bucketList += newItems
 
 bucketList.removeAtIndex(4)
 
