@@ -16,3 +16,6 @@ let hasBananas = groceryBag.contains("Bananas")
 
 let friendsGroceryBag: Set = ["Bananas", "Cereal", "Milk", "Oranges"]
 let commonGroceryBag = groceryBag.union(friendsGroceryBag)
+
+let roommatesGroceryBag: Set = ["Apples", "Bananas", "Cereal", "Toothpaste"]
+let itemsToReturn = commonGroceryBag.intersect(roommatesGroceryBag)
