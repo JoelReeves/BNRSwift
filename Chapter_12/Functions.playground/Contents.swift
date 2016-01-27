@@ -1,13 +1,24 @@
 import Cocoa
 
-// Bronze Challenge
+// Silver Challenge
 
-func greetByMiddleName(name: (first: String, middle: String?, last: String)) {
-    guard let middleName = name.middle where name.middle?.characters.count < 4 else {
-        print("Hey there!")
-        return
+func beanSifter(groceryList list: [String]) -> (beans: [String], otherGroceries: [String]) {
+    var beans = [String]()
+    var otherGroceries = [String]()
+    
+    for item in list {
+        if item.containsString("beans") {
+            beans.append(item)
+        } else {
+            otherGroceries.append(item)
+        }
     }
-    print("Hey \(middleName)")
+    
+    return (beans, otherGroceries)
 }
 
-greetByMiddleName(("David", "Dan", "Jackson"))
+let groceryList = ["green beans", "milk", "black beans", "pinto beans", "apples"]
+let result = beanSifter(groceryList: groceryList)
+
+result.beans
+result.otherGroceries
