@@ -20,3 +20,14 @@ movieRatings.removeValueForKey("Fantastic Four") // returns the value removed
 //movieRatings["Fantastic Four"] = nil   setting a key to nil can also remove from a dictionary
 movieRatings
 
+for (key, value) in movieRatings {
+    print("The movie \(key) was rated \(value)")
+}
+
+for movie in movieRatings.keys {
+    print("I have rated \(movie)")
+}
+
+for rating in movieRatings.values {
+    print("I have the ratings \(rating)")
+}
