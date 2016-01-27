@@ -1,8 +1,11 @@
 import Cocoa
 
-// Bronze Challenge
+// Silver Challenge
 
-let myCities: Set = ["Atlanta", "Chicago", "Jacksonville", "New York", "San Francisco"]
-let yourCities: Set = ["Chicago", "San Francisco", "Jacksonville"]
+var groceryBag: Set = ["Apples", "Oranges", "Pears"]
 
-let commonCities = myCities.isSupersetOf(yourCities)
+let friendsGroceryBag: Set = ["Bananas", "Cereal", "Milk", "Oranges"]
+groceryBag.unionInPlace(friendsGroceryBag)
+
+let roommatesGroceryBag: Set = ["Apples", "Bananas", "Cereal", "Toothpaste"]
+groceryBag.intersectInPlace(roommatesGroceryBag)
