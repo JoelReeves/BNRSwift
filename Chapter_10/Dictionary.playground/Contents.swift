@@ -31,3 +31,6 @@ for movie in movieRatings.keys {
 for rating in movieRatings.values {
     print("I have the ratings \(rating)")
 }
+
+let watchedMovies = Array(movieRatings.keys)
+let ratings = Array(movieRatings.values)
