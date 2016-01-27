@@ -12,4 +12,7 @@ groceryBag.insert("Watermelon")
 
 groceryBag.sort()
 
-let hasBananas = groceryBag.contains("Bananans")
+let hasBananas = groceryBag.contains("Bananas")
+
+let friendsGroceryBag: Set = ["Bananas", "Cereal", "Milk", "Oranges"]
+let commonGroceryBag = groceryBag.union(friendsGroceryBag)
