@@ -47,3 +47,38 @@ enum ProgrammingLanguage: String {
 
 let myFavoriteLanguage = ProgrammingLanguage.Java
 print("My favorite programming language is \(myFavoriteLanguage.rawValue)")
+
+
+// methods
+enum Lightbulb {
+    case On
+    case Off
+    
+    func surfaceTemperatureForAmbientTemperature(ambient: Double) -> Double {
+        switch self {
+        case .On:
+            return ambient + 150.0
+        case .Off:
+            return ambient
+        }
+    }
+    
+    mutating func toggle() {
+        switch self {
+        case .On:
+            self = .Off
+        case .Off:
+            self = .On
+        }
+    }
+}
+
+var bulb = Lightbulb.On
+let ambientTemperature = 77.0
+
+var bulbTemperature = bulb.surfaceTemperatureForAmbientTemperature(ambientTemperature)
+print("the bulb's temperature is \(bulbTemperature)")
+
+bulb.toggle()
+bulbTemperature = bulb.surfaceTemperatureForAmbientTemperature(ambientTemperature)
+print("the bulb's temperature is \(bulbTemperature)")
