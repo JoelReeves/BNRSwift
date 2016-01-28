@@ -1,11 +1,12 @@
 import Cocoa
 
-// Bronze Challenge
+// Silver Challenge
 
 enum ShapeDimensions {
     case Point
     case Square(Double)
     case Rectangle(width: Double, height: Double)
+    case RightTriangle(side1: Double, side2: Double, side3: Double)
     
     func area() -> Double {
         switch self {
@@ -15,17 +16,8 @@ enum ShapeDimensions {
             return side * side
         case let .Rectangle(width: w, height: h):
             return w * h
-        }
-    }
-    
-    func perimeter() -> Double {
-        switch self {
-        case .Point:
-            return 0
-        case let .Square(side):
-            return side * 4
-        case let .Rectangle(width: w, height: h):
-            return (w * 2) + (h * 2)
+        case let .RightTriangle(side1: s1, side2: s2, side3: s3):
+            return s1 + s2 + s3
         }
     }
 }
@@ -33,11 +25,9 @@ enum ShapeDimensions {
 var squareShape = ShapeDimensions.Square(10.0)
 var rectShape = ShapeDimensions.Rectangle(width: 5.0, height: 10.0)
 var pointShape = ShapeDimensions.Point
+var rightTriangleShape = ShapeDimensions.RightTriangle(side1: 10.0, side2: 15.0, side3: 17.0)
 
 print("square's area = \(squareShape.area())")
 print("rectangle's area = \(rectShape.area())")
 print("point's area = \(pointShape.area())")
-
-print("square's perimeter = \(squareShape.perimeter())")
-print("rectangle's perimeter = \(rectShape.perimeter())")
-print("point's perimeter = \(pointShape.perimeter())")
+print("right triangle's area = \(rightTriangleShape.area())")
