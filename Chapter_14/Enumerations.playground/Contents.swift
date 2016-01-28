@@ -109,3 +109,13 @@ var pointShape = ShapeDimensions.Point
 print("square's area = \(squareShape.area())")
 print("rectangle's area = \(rectShape.area())")
 print("point's area = \(pointShape.area())")
+
+
+// recursive enumerations
+enum FamilyTree {
+    case NoKnownParents
+    indirect case OneKnownParent(name: String, ancestors: FamilyTree)
+    indirect case TwoKnownParents(fatherName: String, fatherAncestors: FamilyTree, motherName: String, motherAncestors: FamilyTree)
+}
+
+let fredAncestors = FamilyTree.TwoKnownParents(fatherName: "Fred Sr.", fatherAncestors: .OneKnownParent(name: "Beth", ancestors: .NoKnownParents), motherName: "Marsha", motherAncestors: .NoKnownParents)
