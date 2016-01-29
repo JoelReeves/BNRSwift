@@ -18,3 +18,9 @@ gm.town = myTown
 gm.terrorizeTown()
 
 
+let fredTheZombie = Zombie()
+fredTheZombie.town = myTown
+fredTheZombie.terrorizeTown()
+fredTheZombie.town?.printTownDescription()
+
+
