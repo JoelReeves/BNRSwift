@@ -15,5 +15,10 @@ class Zombie: Monster {
         town?.changePopulation(-10)
         super.terrorizeTown()
     }
+    
+    func changeName(name: String, walksWithLimp: Bool) {
+        self.name = name
+        self.walksWithLimp = walksWithLimp
+    }
 }
 
