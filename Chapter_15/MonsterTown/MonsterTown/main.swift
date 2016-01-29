@@ -24,4 +24,9 @@ fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printTownDescription()
 fredTheZombie.changeName("Fred the Zombie", walksWithLimp: false)
 
+let vampire = Vampire()
+vampire.town = myTown
+vampire.terrorizeTown()
+vampire.town?.printTownDescription()
+
 
