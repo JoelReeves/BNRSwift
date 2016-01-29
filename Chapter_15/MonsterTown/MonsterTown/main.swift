@@ -9,8 +9,12 @@
 import Foundation
 
 var myTown = Town()
-
 myTown.changePopulation(500)
-
 myTown.printTownDescription()
+
+
+let gm = Monster()
+gm.town = myTown
+gm.terrorizeTown()
+
 
