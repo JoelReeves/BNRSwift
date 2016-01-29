@@ -12,7 +12,12 @@ class Zombie: Monster {
     var walksWithLimp = true
     
     final override func terrorizeTown() {
-        town?.changePopulation(-10)
+        if town?.population > 0 {
+            town?.changePopulation(-10)
+        } else if town?.population <= 0 {
+            town?.population = 0
+        }
+        
         super.terrorizeTown()
     }
     
