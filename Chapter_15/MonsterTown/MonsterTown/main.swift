@@ -10,5 +10,7 @@ import Foundation
 
 var myTown = Town()
 
+myTown.changePopulation(500)
+
 myTown.printTownDescription()
 
