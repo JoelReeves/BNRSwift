@@ -28,3 +28,20 @@ func greeting(greeting: String)(name: String) -> String {
 let friendlyGreeting = greeting("Hello, ")
 let newGreeting = friendlyGreeting(name: "Matt")
 print(newGreeting)
+
+
+struct Person {
+    var firstName = "Matt"
+    var lastName = "Mathias"
+    
+    mutating func changename(fn: String, ln: String) {
+        firstName = fn
+        lastName = ln
+    }
+}
+
+var p = Person()
+let changer = Person.changename
+p.changename("John", ln: "Gallagher")
+p.firstName
+p.lastName
