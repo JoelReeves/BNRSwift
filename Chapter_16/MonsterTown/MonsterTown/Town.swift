@@ -13,6 +13,12 @@ struct Town {
     var population = 5422
     var numberOfStoplights = 4
     
+    enum Size {
+        case Small
+        case Medium
+        case Large
+    }
+    
     func printTownDescription() {
         print("Population: \(population); number of stoplights: \(numberOfStoplights)")
     }
