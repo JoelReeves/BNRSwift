@@ -30,3 +30,6 @@ fredTheZombie.town?.printTownDescription()
 fredTheZombie.changeName("Fred the Zombie", walksWithLimp: false)
 
 
+print("Victim pool: \(fredTheZombie.victimPool)")
+fredTheZombie.victimPool = 500
+print("Victim pool: \(fredTheZombie.victimPool); population: \(fredTheZombie.town?.population)")
