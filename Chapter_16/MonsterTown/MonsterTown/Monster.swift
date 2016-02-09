@@ -9,6 +9,7 @@
 import Foundation
 
 class Monster {
+    static let isTerrifying = true
     class var spookyNoise: String {
         return "Grrr"
     }
