@@ -14,7 +14,7 @@ class Zombie: Monster {
     }
     
     var walksWithLimp = true
-    internal private (set) var isFallingApart = true
+    private (set) var isFallingApart = true
     
     final override func terrorizeTown() {
         if !isFallingApart {
