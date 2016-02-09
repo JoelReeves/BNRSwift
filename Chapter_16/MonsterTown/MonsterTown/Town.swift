@@ -12,7 +12,9 @@ struct Town {
     static let region = "South"
     var population = 5422 {
         didSet(oldPopulation) {
-            print("The population has changed to \(population) from \(oldPopulation)")
+            if population < oldPopulation {
+                print("The population has changed to \(population) from \(oldPopulation)")
+            }
         }
     }
     var numberOfStoplights = 4
