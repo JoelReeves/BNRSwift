@@ -8,7 +8,7 @@
 
 import Foundation
 
-var myTown = Town(population: 10000, numberOfStoplights: 6)
+var myTown = Town(population: 10000, stoplights: 6)
 
 let ts = myTown.townSize
 print("Original town size: \(ts)")
