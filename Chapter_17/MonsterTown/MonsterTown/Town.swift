@@ -23,6 +23,10 @@ struct Town {
         numberOfStoplights = stopLights
     }
     
+    init(population: Int, stopLights: Int) {
+        self.init(region: "N/A", population: population, stopLights: stopLights)
+    }
+    
     enum Size {
         case Small
         case Medium
