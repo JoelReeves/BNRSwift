@@ -18,13 +18,12 @@ print("Town size: \(myTown.townSize), population: \(myTown.population)")
 
 myTown.printTownDescription()
 
-let gm = Monster()
+let gm = Monster(town: myTown, monsterName: "MyMonster")
 gm.town = myTown
 gm.terrorizeTown()
 
 
-let fredTheZombie = Zombie()
-fredTheZombie.town = myTown
+let fredTheZombie = Zombie(town: myTown, monsterName: "Fred")
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printTownDescription()
 fredTheZombie.changeName("Fred the Zombie", walksWithLimp: false)
