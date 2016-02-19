@@ -15,7 +15,7 @@ class Monster {
     }
     
     var town: Town?
-    var name = "Monster"
+    var name: String
     
     var victimPool: Int {
         get {
@@ -24,6 +24,11 @@ class Monster {
         set(newVictimPool) {
             town?.population = newVictimPool
         }
+    }
+    
+    init(town: Town?, monsterName: String) {
+        self.town = town
+        name = monsterName
     }
     
     func terrorizeTown() {
