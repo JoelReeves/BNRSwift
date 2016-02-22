@@ -36,6 +36,10 @@ class Zombie: Monster {
         super.init(town: town, monsterName: monsterName)
     }
     
+    deinit {
+        print("Zombie named \(name) is no longer with us")
+    }
+    
     final override func terrorizeTown() {
         if !isFallingApart {
             town?.changePopulation(-10)
