@@ -42,3 +42,13 @@ let greekPantheon = pantheon
 hecate.name = "Trivia"
 greekPantheon.chiefGod.name
 greekPantheon.dateCreated
+
+
+
+let athena = GreekGod(name: "Athena")
+let gods = [athena, hecate, zeus]
+
+let godsCopy = gods
+gods.last?.name = "Jupiter"
+gods
+godsCopy
