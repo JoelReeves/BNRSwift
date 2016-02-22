@@ -28,6 +28,7 @@ fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printTownDescription()
 fredTheZombie.changeName("Fred the Zombie", walksWithLimp: false)
 
+var convenientZombie = Zombie(limp: true, fallingApart: false)
 
 print("Victim pool: \(fredTheZombie.victimPool)")
 fredTheZombie.victimPool = 500
