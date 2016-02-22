@@ -25,3 +25,13 @@ anotherHecate.name = "AnotherHecate"
 anotherHecate.name
 hecate.name
 
+
+
+struct Pantheon {
+    var chiefGod: GreekGod
+}
+
+let pantheon = Pantheon(chiefGod: hecate)
+let zeus = GreekGod(name: "Zeus")
+zeus.name = "Zeus Jr."
+zeus.name
