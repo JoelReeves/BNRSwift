@@ -35,3 +35,8 @@ let pantheon = Pantheon(chiefGod: hecate)
 let zeus = GreekGod(name: "Zeus")
 zeus.name = "Zeus Jr."
 zeus.name
+
+pantheon.chiefGod.name
+let greekPantheon = pantheon
+hecate.name = "Trivia"
+greekPantheon.chiefGod.name
