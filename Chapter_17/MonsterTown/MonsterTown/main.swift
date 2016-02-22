@@ -10,13 +10,13 @@ import Foundation
 
 var myTown = Town(population: 0, stopLights: 6)
 
-let ts = myTown.townSize
+let ts = myTown?.townSize
 print("Original town size: \(ts)")
 
-myTown.changePopulation(1000000)
-print("Town size: \(myTown.townSize), population: \(myTown.population)")
+myTown?.changePopulation(1000000)
+print("Town size: \(myTown?.townSize), population: \(myTown?.population)")
 
-myTown.printTownDescription()
+myTown?.printTownDescription()
 
 let gm = Monster(town: myTown, monsterName: "MyMonster")
 gm.town = myTown
