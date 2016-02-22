@@ -19,8 +19,8 @@ print("Town size: \(myTown?.townSize), population: \(myTown?.population)")
 myTown?.printTownDescription()
 
 let gm = Monster(town: myTown, monsterName: "MyMonster")
-gm.town = myTown
-gm.terrorizeTown()
+gm?.town = myTown
+gm?.terrorizeTown()
 
 
 var fredTheZombie: Zombie? = Zombie(limp: false, fallingApart: false, town: myTown, monsterName: "Fred")

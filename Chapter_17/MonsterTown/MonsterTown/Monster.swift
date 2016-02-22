@@ -26,9 +26,14 @@ class Monster {
         }
     }
     
-    required init(town: Town?, monsterName: String) {
+    required init?(town: Town?, monsterName: String?) {
+        if monsterName == nil {
+            fatalError("Name cannot be empty")
+            print("Name cannot be empty!")
+            return nil
+        }
         self.town = town
-        name = monsterName
+        name = monsterName!
     }
     
     func terrorizeTown() {

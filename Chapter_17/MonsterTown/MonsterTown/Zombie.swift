@@ -16,13 +16,13 @@ class Zombie: Monster {
     var walksWithLimp: Bool
     private (set) var isFallingApart: Bool
     
-    init(limp: Bool, fallingApart: Bool, town: Town?, monsterName: String) {
+    init?(limp: Bool, fallingApart: Bool, town: Town?, monsterName: String?) {
         walksWithLimp = limp
         isFallingApart = fallingApart
         super.init(town: town, monsterName: monsterName)
     }
     
-    convenience init(limp: Bool, fallingApart: Bool) {
+    convenience init?(limp: Bool, fallingApart: Bool) {
         self.init(limp: limp, fallingApart: fallingApart, town: nil, monsterName: "Fred")
         
         if walksWithLimp {
@@ -34,6 +34,10 @@ class Zombie: Monster {
         self.init(town: town, monsterName: monsterName)
         walksWithLimp = false
         isFallingApart = false
+    }
+
+    required init?(town: Town?, monsterName: String?) {
+        fatalError("init(town:monsterName:) has not been implemented")
     }
     
     deinit {
