@@ -17,13 +17,16 @@ struct Town {
     }
     var numberOfStoplights: Int
     
-    init(region: String, population: Int, stopLights: Int) {
+    init?(region: String, population: Int, stopLights: Int) {
+        if population <= 0 {
+            return nil
+        }
         self.region = region
         self.population = population
         numberOfStoplights = stopLights
     }
     
-    init(population: Int, stopLights: Int) {
+    init?(population: Int, stopLights: Int) {
         self.init(region: "N/A", population: population, stopLights: stopLights)
     }
     
