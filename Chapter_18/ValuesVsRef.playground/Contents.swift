@@ -52,3 +52,11 @@ let godsCopy = gods
 gods.last?.name = "Jupiter"
 gods
 godsCopy
+
+
+let x = 1
+let y = 1
+x == y //equality operator
+
+
+athena === hecate // identity operator
