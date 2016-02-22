@@ -23,7 +23,7 @@ gm.town = myTown
 gm.terrorizeTown()
 
 
-let fredTheZombie = Zombie(town: myTown, monsterName: "Fred")
+let fredTheZombie = Zombie(limp: false, fallingApart: false, town: myTown, monsterName: "Fred")
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printTownDescription()
 fredTheZombie.changeName("Fred the Zombie", walksWithLimp: false)
