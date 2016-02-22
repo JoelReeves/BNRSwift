@@ -1,5 +1,15 @@
 import Cocoa
 
+func padding(amount: Int) -> String {
+    var paddingString = ""
+    
+    for _ in 0 ..< amount {
+        paddingString += " "
+    }
+    
+    return paddingString
+}
+
 func printTable(data: [[Int]]) {
     for row in data {
         // creating empty string
