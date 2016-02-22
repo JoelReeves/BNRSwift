@@ -28,7 +28,8 @@ hecate.name
 
 
 struct Pantheon {
-    var chiefGod: GreekGod
+    let chiefGod: GreekGod
+    let dateCreated = NSDate()
 }
 
 let pantheon = Pantheon(chiefGod: hecate)
@@ -40,3 +41,4 @@ pantheon.chiefGod.name
 let greekPantheon = pantheon
 hecate.name = "Trivia"
 greekPantheon.chiefGod.name
+greekPantheon.dateCreated
