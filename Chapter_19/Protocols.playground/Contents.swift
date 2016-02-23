@@ -20,8 +20,11 @@ func padding(amount: Int) -> String {
     return paddingString
 }
 
-func printTable(rowLabels: [String], columnLabels: [String], data: [[Int]]) {
-    // create an array of the width of each row label
+func printTable(dataSource: TabularDataSource) {
+    // create arrays of the row and column labels
+    let rowLabels = (0 ..< dataSource.numberOfRows).map { dataSource.labelForRow($0) }
+    let columnLabels = (0 ..< dataSource.numberOfColumns).map { dataSource.labelForColumn($0) }
+    
     let rowLabelWidths = rowLabels.map { $0.characters.count }
     
     // determine the length of the longest row label
@@ -43,13 +46,14 @@ func printTable(rowLabels: [String], columnLabels: [String], data: [[Int]]) {
     
     print(firstRow)
     
-    for (i, row) in data.enumerate() {
+    for i in 0 ..< dataSource.numberOfRows {
         // pad the row label out so that they are all the same length
         let paddingAmount = maxRowLabelWidth - rowLabelWidths[i]
         var out = rowLabels[i] + padding(paddingAmount) + " |"
         
         // append each item in this row to our string
-        for (j, item) in row.enumerate() {
+        for j in 0 ..< dataSource.numberOfColumns {
+            let item = dataSource.itemForRow(i, column: j)
             let itemString = " \(item) |"
             let paddingAmount = columnWidths[j] - itemString.characters.count
             out += padding(paddingAmount) + itemString
@@ -112,3 +116,5 @@ var department = Department(name: "Engineering")
 department.addPerson(Person(name: "Joe", age: 30, yearsOfExperience: 6))
 department.addPerson(Person(name: "Karen", age: 40, yearsOfExperience: 18))
 department.addPerson(Person(name: "Fred", age: 50, yearsOfExperience: 20))
+
+printTable(department)
