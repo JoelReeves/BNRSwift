@@ -1,5 +1,15 @@
 import Cocoa
 
+protocol TabularDataSource {
+    var numberOfRows: Int { get }
+    var numberOfColumns: Int { get }
+    
+    func labelForRow(row: Int) -> String
+    func labelForColumn(column: Int) -> String
+    
+    func itemForRow(row: Int, column: Int) -> Int
+}
+
 func padding(amount: Int) -> String {
     var paddingString = ""
     
