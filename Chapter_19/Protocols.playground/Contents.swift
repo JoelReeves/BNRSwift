@@ -1,6 +1,6 @@
 import Cocoa
 
-protocol TabularDataSource: CustomStringConvertible {
+protocol TabularDataSource {
     var numberOfRows: Int { get }
     var numberOfColumns: Int { get }
     
@@ -20,7 +20,7 @@ func padding(amount: Int) -> String {
     return paddingString
 }
 
-func printTable(dataSource: TabularDataSource) {
+func printTable(dataSource: protocol<TabularDataSource, CustomStringConvertible>) {
     print("Table: \(dataSource.description)")
     
     // create arrays of the row and column labels
