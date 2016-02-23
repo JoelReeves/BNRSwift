@@ -10,7 +10,7 @@ func padding(amount: Int) -> String {
     return paddingString
 }
 
-func printTable(rowLabels: [String], data: [[Int]]) {
+func printTable(rowLabels: [String], columnLabels: [String], data: [[Int]]) {
     // create an array of the width of each row label
     let rowLabelWidths = rowLabels.map { $0.characters.count }
     
@@ -19,14 +19,30 @@ func printTable(rowLabels: [String], data: [[Int]]) {
         return
     }
     
+    // create first row containing column headers
+    var firstRow: String = padding(maxRowLabelWidth) + " |"
+    
+    // Also keeping track of the widths of each column
+    var columnWidths = [Int]()
+    
+    for columnLabel in columnLabels {
+        let columnHeader = " \(columnLabel) |"
+        firstRow += columnHeader
+        columnWidths.append(columnHeader.characters.count)
+    }
+    
+    print(firstRow)
+    
     for (i, row) in data.enumerate() {
         // pad the row label out so that they are all the same length
         let paddingAmount = maxRowLabelWidth - rowLabelWidths[i]
         var out = rowLabels[i] + padding(paddingAmount) + " |"
         
         // append each item in this row to our string
-        for item in row {
-            out += " \(item) |"
+        for (j, item) in row.enumerate() {
+            let itemString = " \(item) |"
+            let paddingAmount = columnWidths[j] - itemString.characters.count
+            out += padding(paddingAmount) + itemString
         }
         
         //print it
@@ -41,4 +57,5 @@ let data = [
 ]
 
 let rowLabels = ["Joe", "Karen", "Fred"]
-printTable(rowLabels, data: data)
+let columnLabels = ["Age", "Years of Experience"]
+printTable(rowLabels, columnLabels: columnLabels, data: data)
