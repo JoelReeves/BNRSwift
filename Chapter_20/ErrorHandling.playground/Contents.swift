@@ -6,6 +6,10 @@ enum Token {
 }
 
 class Lexer {
+    enum Error: ErrorType {
+        case InvalidCharacter(Character)
+    }
+    
     let input: String.CharacterView
     var position: String.CharacterView.Index
     
@@ -44,8 +48,7 @@ class Lexer {
                 advance()
                 
             default:
-                // something unexpected - need to send back an error
-                break
+                throw Error.InvalidCharacter(nextCharacter)
             }
         }
         
