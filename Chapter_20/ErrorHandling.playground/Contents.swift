@@ -76,6 +76,40 @@ class Lexer {
     }
 }
 
+class Parser {
+    enum Error: ErrorType {
+        case UnexpectedEndOfInput
+        case InvalidToken(Token)
+    }
+    
+    let tokens: [Token]
+    var position = 0
+    
+    init(tokens: [Token]) {
+        self.tokens = tokens
+    }
+    
+    func getNextToken() -> Token? {
+        guard position < tokens.count else {
+            return nil
+        }
+        return tokens[position++]
+    }
+    
+    func getNumber() throws -> Int {
+        guard let token = getNextToken() else {
+            throw Error.UnexpectedEndOfInput
+        }
+        
+        switch token {
+        case .Number(let value) :
+            return value
+        case .Plus:
+            throw Error.InvalidToken(token)
+        }
+    }
+}
+
 
 func evaluate(input: String) {
     print("Evaluating: \(input)")
