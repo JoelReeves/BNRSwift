@@ -76,6 +76,7 @@ class Lexer {
     }
 }
 
+
 func evaluate(input: String) {
     print("Evaluating: \(input)")
     let lexer = Lexer(input: input)
@@ -83,10 +84,11 @@ func evaluate(input: String) {
     do {
         let tokens = try lexer.lex()
         print("Lexer output: \(tokens)")
+    } catch Lexer.Error.InvalidCharacter(let character) {
+        print("Input contained an invalid character: \(character)")
     } catch {
         print("An error occurred: \(error)")
     }
-    
 }
 
 evaluate("10 + 3 + 5")
