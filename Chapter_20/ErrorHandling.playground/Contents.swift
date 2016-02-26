@@ -30,14 +30,34 @@ class Lexer {
         position.advancedBy(1)
     }
     
+    func getNumber() -> Int {
+        var value = 0
+        
+        while let nextCharacter = peek() {
+            switch nextCharacter {
+            case "0" ... "9":
+                // another digit, addings it into value
+                let digitValue = Int(String(nextCharacter))!
+                value = 10 * value + digitValue
+                advance()
+                
+            default:
+                // non-digit - go back to regular lexing
+                return value
+            }
+        }
+        
+        return value
+    }
+    
     func lex() throws -> [Token] {
         var tokens = [Token]()
         
         while let nextCharacter = peek() {
             switch nextCharacter {
             case "0" ... "9":
-                // start of a number - need to grab the rest
-                break
+                let value = getNumber()
+                tokens.append(.Number(value))
                 
             case "+":
                 tokens.append(.Plus)
