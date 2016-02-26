@@ -79,8 +79,14 @@ class Lexer {
 func evaluate(input: String) {
     print("Evaluating: \(input)")
     let lexer = Lexer(input: input)
-    let tokens = lexer.lex()
-    print("Lexer output: \(tokens)")
+    
+    do {
+        let tokens = try lexer.lex()
+        print("Lexer output: \(tokens)")
+    } catch {
+        print("An error occurred: \(error)")
+    }
+    
 }
 
 evaluate("10 + 3 + 5")
