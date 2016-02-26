@@ -92,4 +92,4 @@ func evaluate(input: String) {
 }
 
 evaluate("10 + 3 + 5")
-evaluate("1 + 2 + abcdefg")
+
