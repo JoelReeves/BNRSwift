@@ -42,3 +42,6 @@ extension Car {
         self.init(make: carMake, model: carModel, year: carYear, color: "Black", nickname: "N/A", gasLevel: 1.0)
     }
 }
+
+var car = Car(carMake: "Toyota", carModel: "Prius", carYear: 2016)
+
