@@ -36,3 +36,9 @@ extension Car: VehicleType {
     var numberOfDoors: Int { return 4 }
     var hasFlatbed: Bool { return false }
 }
+
+extension Car {
+    init(carMake: String, carModel: String, carYear: Int) {
+        self.init(make: carMake, model: carModel, year: carYear, color: "Black", nickname: "N/A", gasLevel: 1.0)
+    }
+}
