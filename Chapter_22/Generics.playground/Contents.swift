@@ -23,3 +23,10 @@ intStack.push(2)
 print(intStack.pop())
 print(intStack.pop())
 print(intStack.pop())
+
+
+var stringStack = Stack<String>()
+stringStack.push("test string")
+stringStack.push("another string")
+
+print(stringStack.pop())
