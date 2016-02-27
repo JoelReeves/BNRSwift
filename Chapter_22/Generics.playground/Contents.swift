@@ -101,3 +101,15 @@ while let value = myStackGenerator.next() {
 for value in myStack {
     print("for-in loop: got \(value)")
 }
+
+
+func pushItemsOntoStack<Element>(inout stack: Stack<Element>, fromArray array: [Element]) {
+    for item in array {
+        stack.push(item)
+    }
+}
+
+pushItemsOntoStack(&myStack, fromArray: [1, 2, 3])
+for value in myStack {
+    print("after pushing: got \(value)")
+}
