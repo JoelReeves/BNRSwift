@@ -55,3 +55,13 @@ func myMap<T,U>(items: [T], f: (T) -> (U)) -> [U] {
 let strings = ["one", "two", "three"]
 let stringLengths = myMap(strings) { $0.characters.count }
 print(stringLengths)
+
+
+
+func checkIfEqual<T: Equatable>(first: T, _ second: T) -> Bool {
+    return first == second
+}
+
+print(checkIfEqual(1, 1))
+print(checkIfEqual("a string", "a string"))
+print(checkIfEqual("a string", "a different string"))
