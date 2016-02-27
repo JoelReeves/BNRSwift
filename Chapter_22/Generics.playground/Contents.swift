@@ -115,3 +115,11 @@ pushItemsOntoStack(&myStack, fromSequence: [1, 2, 3])
 for value in myStack {
     print("after pushing: got \(value)")
 }
+
+
+var myOtherStack = Stack<Int>()
+pushItemsOntoStack(&myOtherStack, fromSequence: [1, 2, 3])
+pushItemsOntoStack(&myStack, fromSequence: myOtherStack)
+for value in myStack {
+    print("after pushing items onto stack: got \(value)")
+}
