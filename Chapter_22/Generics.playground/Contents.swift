@@ -8,7 +8,7 @@ struct StackGenerator<T>: GeneratorType {
     }
 }
 
-struct Stack<Element> {
+struct Stack<Element>: SequenceType {
     var items = [Element]()
     
     mutating func push(newItem: Element) {
@@ -28,6 +28,10 @@ struct Stack<Element> {
             mappedItems.append(f(item))
         }
         return Stack<U>(items: mappedItems)
+    }
+    
+    func generate() -> StackGenerator<Element> {
+        return StackGenerator(stack: self)
     }
 }
 
@@ -92,4 +96,8 @@ myStack.push(30)
 var myStackGenerator = StackGenerator(stack: myStack)
 while let value = myStackGenerator.next() {
     print("got \(value)")
+}
+
+for value in myStack {
+    print("for-in loop: got \(value)")
 }
