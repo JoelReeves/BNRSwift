@@ -21,4 +21,8 @@ class Accountant {
     func gainedNewAsset(asset: Asset) {
         netWorth += asset.value
     }
+    
+    func removeAsset(asset: Asset) {
+        netWorth -= asset.value
+    }
 }

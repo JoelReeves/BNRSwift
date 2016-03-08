@@ -38,6 +38,16 @@ class Person: CustomStringConvertible {
         accountant.gainedNewAsset(asset)
     }
     
+    func giveUpOwnershipOfAsset(asset: Asset) {
+        for (index, item) in assets.enumerate() {
+            if item === asset {
+                assets.removeAtIndex(index)
+                asset.owner = nil
+                accountant.removeAsset(asset)
+            }
+        }
+    }
+    
     func netWorthDidChange(netWorth: Double) {
         print("The net worth of \(self) is now \(netWorth)")
     }
@@ -52,6 +62,7 @@ var backpack: Asset? = Asset(name: "Black backpack", value: 50.0)
 
 bob?.takeOwnershipOfAsset(laptop!)
 bob?.takeOwnershipOfAsset(hat!)
+bob?.giveUpOwnershipOfAsset(hat!)
 
 print("While Bob is alive, hat's owner is \(hat!.owner)")
 bob = nil
