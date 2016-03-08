@@ -13,3 +13,4 @@ let a = Point(x: 3, y: 4)
 let b = Point(x: 3, y: 4)
 
 let abEqual = (a == b) // now works since we definined the == operator for Points
+let abNotEqual = (a != b) // two Points are equal i.e not unequal
