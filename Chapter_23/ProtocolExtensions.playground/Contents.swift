@@ -6,6 +6,12 @@ protocol ExerciseType {
     var minutes: Double { get }
 }
 
+extension ExerciseType {
+    var caloriesBurnedPerMinute: Double {
+        return caloriesBurned / minutes
+    }
+}
+
 struct EllipticalTrainer: ExerciseType {
     let name = "Elliptical Machine"
     let caloriesBurned: Double
@@ -22,3 +28,7 @@ struct Treadmill: ExerciseType {
 let ellipticalWorkout = EllipticalTrainer(caloriesBurned: 335, minutes: 30)
 
 let runningWorkout = Treadmill(caloriesBurned: 350, minutes: 25, distanceInMiles: 4.2)
+
+
+print(ellipticalWorkout.caloriesBurnedPerMinute)
+print(runningWorkout.caloriesBurnedPerMinute)
