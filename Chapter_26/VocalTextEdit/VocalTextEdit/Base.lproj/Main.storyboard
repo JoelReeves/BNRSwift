@@ -673,7 +673,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-JQ-Zhu">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-JQ-Zhu">
                                 <rect key="frame" x="388" y="222" width="78" height="32"/>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="Speak" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BDC-gJ-jcL">
@@ -681,7 +681,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lh9-Pi-7Ey">
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lh9-Pi-7Ey">
                                 <rect key="frame" x="293" y="222" width="81" height="32"/>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mY6-OR-GEt">
@@ -723,6 +723,12 @@
                                 </scroller>
                             </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="lh9-Pi-7Ey" firstAttribute="baseline" secondItem="GIA-JQ-Zhu" secondAttribute="baseline" id="FiY-34-HMa"/>
+                            <constraint firstItem="GIA-JQ-Zhu" firstAttribute="leading" secondItem="lh9-Pi-7Ey" secondAttribute="trailing" constant="26" id="TmL-9z-ahP"/>
+                            <constraint firstItem="GIA-JQ-Zhu" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="bqo-W4-AgQ"/>
+                            <constraint firstAttribute="trailing" secondItem="GIA-JQ-Zhu" secondAttribute="trailing" constant="20" id="x3B-Uw-4SI"/>
+                        </constraints>
                         <animations/>
                     </view>
                 </viewController>
