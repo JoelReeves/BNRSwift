@@ -31,6 +31,12 @@ struct Treadmill: ExerciseType {
     let distanceInMiles: Double
 }
 
+extension Treadmill {
+    var description: String {
+        return "Treadmill(\(caloriesBurned) calories and \(distanceInMiles) miles in \(minutes) minutes"
+    }
+}
+
 let ellipticalWorkout = EllipticalTrainer(caloriesBurned: 335, minutes: 30)
 
 let runningWorkout = Treadmill(caloriesBurned: 350, minutes: 25, distanceInMiles: 4.2)
