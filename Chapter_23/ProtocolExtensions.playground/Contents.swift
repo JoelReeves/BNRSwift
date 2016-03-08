@@ -1,7 +1,8 @@
 import Cocoa
 
 protocol ExerciseType: CustomStringConvertible {
-    var name: String {get }
+    var name: String { get }
+    var title: String { get }
     var caloriesBurned: Double { get }
     var minutes: Double { get }
 }
@@ -33,6 +34,7 @@ struct EllipticalTrainer: ExerciseType {
 
 struct Treadmill: ExerciseType {
     let name = "Treadmill"
+    let title = "Run Fast Treadmill 10000"
     let caloriesBurned: Double
     let minutes: Double
     let distanceInMiles: Double
