@@ -741,6 +741,9 @@
                         </constraints>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Q0u-kW-huo" id="sxn-Dd-czA"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
