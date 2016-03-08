@@ -24,3 +24,9 @@ class Person: CustomStringConvertible {
     }
 }
 
+var bob: Person? = Person(name: "Bob")
+print("created \(bob)")
+
+bob = nil
+print("the bob variable is now \(bob)")
+
