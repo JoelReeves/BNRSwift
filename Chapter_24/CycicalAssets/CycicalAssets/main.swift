@@ -21,9 +21,9 @@ class Person: CustomStringConvertible {
         self.name = name
         
         accountant.netWorthChangedhandler = {
-            netWorth in
+            [weak self] netWorth in
             
-            self.netWorthDidChange(netWorth)
+            self?.netWorthDidChange(netWorth)
             return
         }
     }
