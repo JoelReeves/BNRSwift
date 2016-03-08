@@ -33,13 +33,15 @@ class Person: CustomStringConvertible {
 var bob: Person? = Person(name: "Bob")
 print("created \(bob)")
 
-bob = nil
-print("the bob variable is now \(bob)")
-
-
 var laptop: Asset? = Asset(name: "Shiny laptop", value: 1500.0)
 var hat: Asset? = Asset(name: "Pirate hat", value: 250.0)
 var backpack: Asset? = Asset(name: "Black backpack", value: 50.0)
+
+bob?.takeOwnershipOfAsset(laptop!)
+bob?.takeOwnershipOfAsset(hat!)
+
+bob = nil
+print("the bob variable is now \(bob)")
 
 laptop = nil
 hat = nil
