@@ -1,6 +1,6 @@
 import Cocoa
 
-protocol ExerciseType {
+protocol ExerciseType: CustomStringConvertible {
     var name: String {get }
     var caloriesBurned: Double { get }
     var minutes: Double { get }
@@ -9,6 +9,12 @@ protocol ExerciseType {
 extension ExerciseType {
     var caloriesBurnedPerMinute: Double {
         return caloriesBurned / minutes
+    }
+}
+
+extension ExerciseType {
+    var description: String {
+        return "Exercise(\(name), burned \(caloriesBurned) calories in \(minutes) minutes"
     }
 }
 
@@ -47,3 +53,7 @@ extension SequenceType where Generator.Element == ExerciseType {
 
 let mondayWorkout: [ExerciseType] = [ellipticalWorkout, runningWorkout]
 print(mondayWorkout.totalCaloriesBurned())
+
+
+print(ellipticalWorkout)
+print(runningWorkout)
