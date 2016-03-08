@@ -15,7 +15,11 @@ class ViewController: NSViewController {
     @IBOutlet var textView: NSTextView!
     
     @IBAction func speakButtonClicked(sender: NSButton) {
-        print("I should speak \(textView.string)")
+        if let contents = textView.string where !contents.isEmpty {
+            speechSynthesizer.startSpeakingString(contents)
+        } else {
+            speechSynthesizer.startSpeakingString("The document is empty")
+        }
     }
     
     @IBAction func stopButtonClicked(sender: NSButton) {
