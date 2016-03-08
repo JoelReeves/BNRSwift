@@ -33,6 +33,10 @@ class Person: CustomStringConvertible {
     }
     
     func takeOwnershipOfAsset(asset: Asset) {
+        guard asset.owner == nil else {
+            print("ERROR!!! Asset \(asset.name) is already owned by \(asset.owner!.name)")
+            return
+        }
         asset.owner = self
         assets.append(asset)
         accountant.gainedNewAsset(asset)
@@ -56,11 +60,15 @@ class Person: CustomStringConvertible {
 var bob: Person? = Person(name: "Bob")
 print("created \(bob)")
 
+var jane: Person? = Person(name: "Jane")
+print("created \(jane)")
+
 var laptop: Asset? = Asset(name: "Shiny laptop", value: 1500.0)
 var hat: Asset? = Asset(name: "Pirate hat", value: 250.0)
 var backpack: Asset? = Asset(name: "Black backpack", value: 50.0)
 
 bob?.takeOwnershipOfAsset(laptop!)
+jane?.takeOwnershipOfAsset(laptop!)
 bob?.takeOwnershipOfAsset(hat!)
 bob?.giveUpOwnershipOfAsset(hat!)
 
