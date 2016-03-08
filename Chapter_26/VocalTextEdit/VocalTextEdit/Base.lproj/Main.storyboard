@@ -689,13 +689,13 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur3-iS-HV3">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur3-iS-HV3">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
-                                <clipView key="contentView" ambiguous="YES" id="S4T-WY-8QT">
+                                <clipView key="contentView" id="S4T-WY-8QT">
                                     <rect key="frame" x="1" y="1" width="463" height="208"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Q0u-kW-huo">
+                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Q0u-kW-huo">
                                             <rect key="frame" x="0.0" y="0.0" width="463" height="208"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
@@ -725,8 +725,12 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="lh9-Pi-7Ey" firstAttribute="baseline" secondItem="GIA-JQ-Zhu" secondAttribute="baseline" id="FiY-34-HMa"/>
+                            <constraint firstItem="Ur3-iS-HV3" firstAttribute="top" secondItem="GIA-JQ-Zhu" secondAttribute="bottom" constant="19" id="JsM-Km-2dO"/>
+                            <constraint firstAttribute="trailing" secondItem="Ur3-iS-HV3" secondAttribute="trailing" id="Lwa-TG-Uw6"/>
                             <constraint firstItem="GIA-JQ-Zhu" firstAttribute="leading" secondItem="lh9-Pi-7Ey" secondAttribute="trailing" constant="26" id="TmL-9z-ahP"/>
                             <constraint firstItem="GIA-JQ-Zhu" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="bqo-W4-AgQ"/>
+                            <constraint firstItem="Ur3-iS-HV3" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="mTY-mI-Vtd"/>
+                            <constraint firstAttribute="bottom" secondItem="Ur3-iS-HV3" secondAttribute="bottom" id="oQc-hL-1vG"/>
                             <constraint firstAttribute="trailing" secondItem="GIA-JQ-Zhu" secondAttribute="trailing" constant="20" id="x3B-Uw-4SI"/>
                         </constraints>
                         <animations/>
