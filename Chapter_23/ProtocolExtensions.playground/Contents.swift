@@ -32,3 +32,18 @@ let runningWorkout = Treadmill(caloriesBurned: 350, minutes: 25, distanceInMiles
 
 print(ellipticalWorkout.caloriesBurnedPerMinute)
 print(runningWorkout.caloriesBurnedPerMinute)
+
+
+extension SequenceType where Generator.Element == ExerciseType {
+    func totalCaloriesBurned() -> Double {
+        var total: Double = 0
+        for exercise in self {
+            total += exercise.caloriesBurned
+        }
+        return total
+    }
+}
+
+
+let mondayWorkout: [ExerciseType] = [ellipticalWorkout, runningWorkout]
+print(mondayWorkout.totalCaloriesBurned())
