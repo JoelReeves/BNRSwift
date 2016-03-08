@@ -26,6 +26,7 @@ extension ExerciseType {
 
 struct EllipticalTrainer: ExerciseType {
     let name = "Elliptical Machine"
+    let title = "Go Fast Elliptical Machine 3000"
     let caloriesBurned: Double
     let minutes: Double
 }
@@ -73,3 +74,5 @@ print(runningWorkout)
 for exercise in mondayWorkout {
     print(exercise.title)
 }
+
+print(ellipticalWorkout.title)
