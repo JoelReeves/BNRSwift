@@ -18,6 +18,12 @@ extension ExerciseType {
     }
 }
 
+extension ExerciseType {
+    var title: String {
+        return "\(name) - \(minutes) minutes"
+    }
+}
+
 struct EllipticalTrainer: ExerciseType {
     let name = "Elliptical Machine"
     let caloriesBurned: Double
@@ -63,3 +69,7 @@ print(mondayWorkout.totalCaloriesBurned())
 
 print(ellipticalWorkout)
 print(runningWorkout)
+
+for exercise in mondayWorkout {
+    print(exercise.title)
+}
