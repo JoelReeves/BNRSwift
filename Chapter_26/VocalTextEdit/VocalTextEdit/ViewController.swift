@@ -30,6 +30,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate {
         super.viewDidLoad()
         
         stopButton.enabled = false
+        progressBar.displayedWhenStopped = false
         speechSynthesizer.delegate = self
     }
     
