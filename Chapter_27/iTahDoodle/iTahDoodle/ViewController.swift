@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func insertButtonPressed(sender: UIButton) {
-        guard let text = itemTextField.text else {
+        guard let text = itemTextField.text where text != "" else {
             return
         }
         todoList.addItem(text)
