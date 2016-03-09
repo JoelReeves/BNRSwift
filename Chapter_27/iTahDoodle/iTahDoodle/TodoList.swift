@@ -14,6 +14,12 @@ class TodoList: NSObject {
     func addItem(item: String) {
         items.append(item)
     }
+    
+    private let fileURL: NSURL = {
+        let documentDirectoryURLs = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let documentDirectoryURL = documentDirectoryURLs.first!
+        return documentDirectoryURL.URLByAppendingPathComponent("todolist.items")
+    }()
 }
 
 extension TodoList: UITableViewDataSource {
