@@ -41,6 +41,11 @@ class TodoList: NSObject {
         items.append(item)
         saveItems()
     }
+    
+    func deleteItem(index: Int) {
+        items.removeAtIndex(index)
+        saveItems()
+    }
 }
 
 extension TodoList: UITableViewDataSource {
