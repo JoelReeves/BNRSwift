@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSSpeechSynthesizerDelegate {
     
     let speechSynthesizer = NSSpeechSynthesizer()
     
@@ -29,9 +29,18 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         stopButton.enabled = false
+        speechSynthesizer.delegate = self
     }
     
-    @IBAction func speakButtonClicked(sender: NSButton) {       
+    func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
+        speakButton.enabled = true
+        stopButton.enabled = false
+    }
+    
+    @IBAction func speakButtonClicked(sender: NSButton) {
+        speakButton.enabled = false
+        stopButton.enabled = true
+        
         if let contents = textView.string where !contents.isEmpty {
             speechSynthesizer.startSpeakingString(contents)
         } else {
