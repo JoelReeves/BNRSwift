@@ -742,6 +742,8 @@
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="speakButton" destination="GIA-JQ-Zhu" id="dHP-aE-kp9"/>
+                        <outlet property="stopButton" destination="lh9-Pi-7Ey" id="8Xo-gc-LRb"/>
                         <outlet property="textView" destination="Q0u-kW-huo" id="sxn-Dd-czA"/>
                     </connections>
                 </viewController>
