@@ -22,7 +22,7 @@ class Document: NSDocument {
         let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as! NSWindowController
         
         let viewController = windowController.contentViewController as! ViewController
-        viewController.textView.string = contents
+        viewController.contents = contents
         
         self.addWindowController(windowController)
     }
@@ -31,7 +31,7 @@ class Document: NSDocument {
         let windowController = windowControllers[0]
         let viewController = windowController.contentViewController as! ViewController
         
-        let contents = viewController.textView.string ?? ""
+        let contents = viewController.contents ?? ""
         
         if let data = contents.dataUsingEncoding(NSUTF8StringEncoding) {
             return data
