@@ -11,6 +11,11 @@ import UIKit
 class TodoList: NSObject {
     private var items: [String] = []
     
+    override init() {
+        super.init()
+        loadItems()
+    }
+    
     private let fileURL: NSURL = {
         let documentDirectoryURLs = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         let documentDirectoryURL = documentDirectoryURLs.first!
@@ -23,6 +28,12 @@ class TodoList: NSObject {
         print("Saving items to \(fileURL)")
         if !itemsArray.writeToURL(fileURL, atomically: true) {
             print("Could not save to-do list")
+        }
+    }
+    
+    func loadItems() {
+        if let itemsArray = NSArray(contentsOfURL: fileURL) as? [String] {
+            items = itemsArray
         }
     }
     
