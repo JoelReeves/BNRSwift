@@ -12,6 +12,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate {
     
     let speechSynthesizer = NSSpeechSynthesizer()
     
+    @IBOutlet weak var progressBar: NSProgressIndicator!
     @IBOutlet weak var speakButton: NSButton!
     @IBOutlet weak var stopButton: NSButton!
     @IBOutlet var textView: NSTextView!

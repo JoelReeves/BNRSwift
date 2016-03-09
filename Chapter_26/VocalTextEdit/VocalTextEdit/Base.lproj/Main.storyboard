@@ -728,12 +728,22 @@
                                     <animations/>
                                 </scroller>
                             </scrollView>
+                            <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-8d-GNE">
+                                <rect key="frame" x="25" y="229" width="217" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="nYW-UX-96b"/>
+                                </constraints>
+                                <animations/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="lh9-Pi-7Ey" firstAttribute="baseline" secondItem="GIA-JQ-Zhu" secondAttribute="baseline" id="FiY-34-HMa"/>
                             <constraint firstItem="Ur3-iS-HV3" firstAttribute="top" secondItem="GIA-JQ-Zhu" secondAttribute="bottom" constant="19" id="JsM-Km-2dO"/>
                             <constraint firstAttribute="trailing" secondItem="Ur3-iS-HV3" secondAttribute="trailing" id="Lwa-TG-Uw6"/>
+                            <constraint firstItem="7fO-8d-GNE" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="25" id="NfB-dX-fYx"/>
                             <constraint firstItem="GIA-JQ-Zhu" firstAttribute="leading" secondItem="lh9-Pi-7Ey" secondAttribute="trailing" constant="26" id="TmL-9z-ahP"/>
+                            <constraint firstItem="7fO-8d-GNE" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="22" id="UhS-3d-79E"/>
+                            <constraint firstItem="Ur3-iS-HV3" firstAttribute="top" secondItem="7fO-8d-GNE" secondAttribute="bottom" constant="20" id="bpS-dR-OV5"/>
                             <constraint firstItem="GIA-JQ-Zhu" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="bqo-W4-AgQ"/>
                             <constraint firstItem="Ur3-iS-HV3" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="mTY-mI-Vtd"/>
                             <constraint firstAttribute="bottom" secondItem="Ur3-iS-HV3" secondAttribute="bottom" id="oQc-hL-1vG"/>
@@ -742,6 +752,7 @@
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="7fO-8d-GNE" id="deh-Ez-5Xb"/>
                         <outlet property="speakButton" destination="GIA-JQ-Zhu" id="dHP-aE-kp9"/>
                         <outlet property="stopButton" destination="lh9-Pi-7Ey" id="8Xo-gc-LRb"/>
                         <outlet property="textView" destination="Q0u-kW-huo" id="sxn-Dd-czA"/>
