@@ -10,9 +10,22 @@
 
 @interface ContactsViewController ()
 
+@property (nonatomic, readonly, strong) NSMutableArray * contacts;
+
 @end
 
 @implementation ContactsViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        NSArray *contactArray = @[@"Johnny Appleseed",
+                                  @"Paul Bunyan",
+                                  @"Calamity Jane"]
+        _contacts = [NSMutableArray arrayWithArray:contactArray]
+    }
+    return self
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
