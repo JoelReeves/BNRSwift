@@ -20,7 +20,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="czx-vQ-06t">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5kk-Ld-OSF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5kk-Ld-OSF">
+                            <connections>
+                                <segue destination="Ai6-G4-LpZ" kind="presentation" id="RTR-ty-Cia"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOM-SZ-K7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNk-32-EUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="557"/>
+            <point key="canvasLocation" x="1372" y="557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YHI-v5-riZ">
