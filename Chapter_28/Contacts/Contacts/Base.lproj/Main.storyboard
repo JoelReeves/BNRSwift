@@ -22,7 +22,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="czx-vQ-06t">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5kk-Ld-OSF">
                             <connections>
-                                <segue destination="Ai6-G4-LpZ" kind="presentation" id="RTR-ty-Cia"/>
+                                <segue destination="NNc-Fq-OHf" kind="presentation" id="HG1-wb-QYH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="683" y="557"/>
         </scene>
-        <!--New Contact View Controller-->
+        <!--Contact-->
         <scene sceneID="KLb-Fd-s6M">
             <objects>
                 <viewController id="Ai6-G4-LpZ" customClass="NewContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,27 +44,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-rO-0bE">
-                                <rect key="frame" x="51" y="54" width="94" height="21"/>
+                                <rect key="frame" x="51" y="82" width="94" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GB-6c-Czz">
-                                <rect key="frame" x="51" y="90" width="94" height="21"/>
+                                <rect key="frame" x="51" y="118" width="94" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idk-sI-qLn">
-                                <rect key="frame" x="161" y="86" width="184" height="30"/>
+                                <rect key="frame" x="161" y="114" width="184" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-27-X1C">
-                                <rect key="frame" x="161" y="50" width="184" height="30"/>
+                                <rect key="frame" x="161" y="78" width="184" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -73,11 +73,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eg5-Nx-KyQ"/>
+                    <navigationItem key="navigationItem" title="Contact" id="eg5-Nx-KyQ">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8Dl-KJ-FnJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Nls-M4-EM0"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNk-32-EUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="557"/>
+            <point key="canvasLocation" x="2048" y="552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mdc-z7-0ZD">
@@ -94,7 +97,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbu-Ht-4gA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="1240"/>
+            <point key="canvasLocation" x="1361" y="557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YHI-v5-riZ">
@@ -114,7 +117,4 @@
             <point key="canvasLocation" x="-34" y="557"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="UJu-7j-WYk"/>
-    </inferredMetricsTieBreakers>
 </document>
