@@ -21,20 +21,36 @@
     if (self) {
         NSArray *contactArray = @[@"Johnny Appleseed",
                                   @"Paul Bunyan",
-                                  @"Calamity Jane"]
-        _contacts = [NSMutableArray arrayWithArray:contactArray]
+                                  @"Calamity Jane"];
+        _contacts = [NSMutableArray arrayWithArray:contactArray];
     }
-    return self
+    return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.contacts.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    
+    NSString *contact = self.contacts[indexPath.row];
+    
+    cell.textLabel.text = contact;
+    
+    return cell;
 }
 
 @end
