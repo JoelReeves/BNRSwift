@@ -16,6 +16,7 @@
 		AB2355971C90D14300252843 /* ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2355961C90D14300252843 /* ContactsTests.m */; };
 		AB3E408D1C91BE3A001535F8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E408C1C91BE3A001535F8 /* Contact.swift */; };
 		AB3E408F1C91C2CB001535F8 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E408E1C91C2CB001535F8 /* NewContactViewController.swift */; };
+		AB3E40921C91D0C1001535F8 /* DefaultImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3E40911C91D0C1001535F8 /* DefaultImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		AB3E408B1C91BE3A001535F8 /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
 		AB3E408C1C91BE3A001535F8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AB3E408E1C91C2CB001535F8 /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
+		AB3E40901C91D0C1001535F8 /* DefaultImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultImage.h; sourceTree = "<group>"; };
+		AB3E40911C91D0C1001535F8 /* DefaultImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				AB2355831C90D14300252843 /* ContactsViewController.m */,
 				AB3E408E1C91C2CB001535F8 /* NewContactViewController.swift */,
 				AB2355851C90D14300252843 /* Main.storyboard */,
+				AB3E40901C91D0C1001535F8 /* DefaultImage.h */,
+				AB3E40911C91D0C1001535F8 /* DefaultImage.m */,
 				AB2355881C90D14300252843 /* Assets.xcassets */,
 				AB23558A1C90D14300252843 /* LaunchScreen.storyboard */,
 				AB23558D1C90D14300252843 /* Info.plist */,
@@ -224,6 +229,7 @@
 				AB2355841C90D14300252843 /* ContactsViewController.m in Sources */,
 				AB2355811C90D14300252843 /* AppDelegate.m in Sources */,
 				AB23557E1C90D14300252843 /* main.m in Sources */,
+				AB3E40921C91D0C1001535F8 /* DefaultImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

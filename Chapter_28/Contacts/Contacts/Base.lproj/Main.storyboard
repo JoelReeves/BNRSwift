@@ -57,21 +57,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idk-sI-qLn">
-                                <rect key="frame" x="161" y="114" width="184" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-27-X1C">
                                 <rect key="frame" x="161" y="78" width="184" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idk-sI-qLn">
+                                <rect key="frame" x="161" y="114" width="184" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kwm-dl-N9g">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="EDK-z2-iMR"/>
+                                    <constraint firstAttribute="height" constant="240" id="mPZ-0k-Q4S"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kwm-dl-N9g" firstAttribute="centerX" secondItem="i1G-bC-dBt" secondAttribute="centerX" id="WDe-iZ-YX4"/>
+                            <constraint firstItem="Kwm-dl-N9g" firstAttribute="centerY" secondItem="i1G-bC-dBt" secondAttribute="centerY" id="wk9-uv-NSJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contact" id="eg5-Nx-KyQ">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="8Dl-KJ-FnJ">
