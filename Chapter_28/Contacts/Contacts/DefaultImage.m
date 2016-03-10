@@ -39,7 +39,7 @@
     // draw eyes
     CGColorRef black = [[UIColor blackColor] CGColor];
     CGRect leftEyeRect = CGRectMake(center.x - 50, center.y - 50, 20, 20);
-    CGRect rightEyeRect = CGRectMake(center.x + 30, center.y + 30, 20, 20);
+    CGRect rightEyeRect = CGRectMake(center.x + 30, center.y - 50, 20, 20);
     CGContextSetFillColorWithColor(context, black);
     CGContextFillEllipseInRect(context, leftEyeRect);
     CGContextFillEllipseInRect(context, rightEyeRect);
