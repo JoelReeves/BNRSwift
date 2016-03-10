@@ -10,6 +10,9 @@ import UIKit
 
 class NewContactViewController: UIViewController {
 
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

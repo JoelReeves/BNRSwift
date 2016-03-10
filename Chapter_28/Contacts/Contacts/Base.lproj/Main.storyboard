@@ -77,6 +77,10 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="8Dl-KJ-FnJ"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Nls-M4-EM0"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="MUZ-27-X1C" id="DaB-KZ-zeT"/>
+                        <outlet property="lastNameTextField" destination="idk-sI-qLn" id="ZG9-sR-2UF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNk-32-EUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
