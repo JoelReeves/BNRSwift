@@ -17,7 +17,7 @@ class NewContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        contactImageView.image = DefaultImage.generateDefaultImageOfSize(contactImageView.frame.size)
     }
 
     override func didReceiveMemoryWarning() {
