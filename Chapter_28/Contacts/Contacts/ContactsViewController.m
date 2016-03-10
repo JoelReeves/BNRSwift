@@ -55,4 +55,17 @@
     // no action to take if the user cancels
 }
 
+- (IBAction)createNewContact:(UIStoryboardSegue *)segue {
+    NewContactViewController *newContactVC = segue.sourceViewController;
+    NSString *firstname = newContactVC.firstNameTextField.text;
+    NSString *lastName = newContactVC.lastNameTextField.text;
+    
+    if (firstname.length != 0 || lastName.length!= 0) {
+        NSString *contactName = [NSString stringWithFormat:@"%@ %@", firstname, lastName];
+        Contact *newContact = [[Contact alloc] initWithContactName:contactName];
+        [self.contacts addObject:newContact];
+        [self.tableView reloadData];
+    }
+}
+
 @end
