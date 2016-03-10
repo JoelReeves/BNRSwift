@@ -14,6 +14,7 @@
 		AB2355891C90D14300252843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2355881C90D14300252843 /* Assets.xcassets */; };
 		AB23558C1C90D14300252843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB23558A1C90D14300252843 /* LaunchScreen.storyboard */; };
 		AB2355971C90D14300252843 /* ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2355961C90D14300252843 /* ContactsTests.m */; };
+		AB3E408D1C91BE3A001535F8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E408C1C91BE3A001535F8 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		AB2355921C90D14300252843 /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2355961C90D14300252843 /* ContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTests.m; sourceTree = "<group>"; };
 		AB2355981C90D14300252843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3E408B1C91BE3A001535F8 /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
+		AB3E408C1C91BE3A001535F8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +66,11 @@
 		AB2355701C90D14300252843 = {
 			isa = PBXGroup;
 			children = (
+				AB3E408C1C91BE3A001535F8 /* Contact.swift */,
 				AB23557B1C90D14300252843 /* Contacts */,
 				AB2355951C90D14300252843 /* ContactsTests */,
 				AB23557A1C90D14300252843 /* Products */,
+				AB3E408B1C91BE3A001535F8 /* Contacts-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3E408D1C91BE3A001535F8 /* Contact.swift in Sources */,
 				AB2355841C90D14300252843 /* ContactsViewController.m in Sources */,
 				AB2355811C90D14300252843 /* AppDelegate.m in Sources */,
 				AB23557E1C90D14300252843 /* main.m in Sources */,
@@ -339,10 +345,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bromancelabs.Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,10 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bromancelabs.Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -400,6 +411,7 @@
 				AB23559D1C90D14300252843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB23559E1C90D14300252843 /* Build configuration list for PBXNativeTarget "ContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +420,7 @@
 				AB2355A01C90D14300252843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
