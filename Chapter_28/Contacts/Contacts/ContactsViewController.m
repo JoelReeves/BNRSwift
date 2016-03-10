@@ -51,4 +51,8 @@
     return cell;
 }
 
+- (IBAction)cancelToContactsViewController:(UIStoryboardSegue *)segue {
+    // no action to take if the user cancels
+}
+
 @end
