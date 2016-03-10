@@ -98,6 +98,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contactImageView" destination="Kwm-dl-N9g" id="Tz0-Hf-u7X"/>
                         <outlet property="firstNameTextField" destination="MUZ-27-X1C" id="DaB-KZ-zeT"/>
                         <outlet property="lastNameTextField" destination="idk-sI-qLn" id="ZG9-sR-2UF"/>
                     </connections>
