@@ -19,11 +19,32 @@
                             <outlet property="delegate" destination="9F8-zq-8hU" id="qeE-GG-bEp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="czx-vQ-06t"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="czx-vQ-06t">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5kk-Ld-OSF"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOM-SZ-K7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="683" y="557"/>
+        </scene>
+        <!--New Contact View Controller-->
+        <scene sceneID="KLb-Fd-s6M">
+            <objects>
+                <viewController id="Ai6-G4-LpZ" customClass="NewContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hRa-Uk-rCo"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZU-Oy-3Qq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i1G-bC-dBt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNk-32-EUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YHI-v5-riZ">
