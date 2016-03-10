@@ -79,7 +79,11 @@
                                 <segue destination="7TO-at-hNT" kind="unwind" unwindAction="cancelToContactsViewController:" id="HuS-27-h4J"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Nls-M4-EM0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Nls-M4-EM0">
+                            <connections>
+                                <segue destination="7TO-at-hNT" kind="unwind" unwindAction="createNewContact:" id="hZT-W1-smq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="firstNameTextField" destination="MUZ-27-X1C" id="DaB-KZ-zeT"/>
